@@ -32,7 +32,7 @@ namespace StringPerformanceTest
         [Benchmark]
         public int CountOccurrences()
         {
-            
+            //This is a test change
         }
     }
 
