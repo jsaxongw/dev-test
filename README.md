@@ -1,6 +1,6 @@
 ﻿This Program reads in lines from a file and counts the occurences of particular words
 
-The Program itself has already been implemented to read in lines from a txt file, however the CountOccurrences method has not yet been implementd. 
+The Program itself has already been implemented to read in lines from a txt file, however the CountOccurrences method has not yet been implemented. 
 In order to complete this test the CountOccurrences must me implemented that when all lines are read the occurence of each pre-defined word is counted. 
 
 Particular attention should be paid to the time it takes to count the occurences of each word along with memory performance of your implementation.
