@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 using System;
 using System.IO;
@@ -32,15 +33,39 @@ namespace StringPerformanceTest
         [Benchmark]
         public int CountOccurrences()
         {
-            
+            return IndexOfMethod();
         }
+
+        private int RegexMethod()
+        {
+            throw new NotImplementedException();
+        }
+
+        private int IndexOfMethod()
+        {
+            int occurences = 0;
+
+            foreach (var line in Lines)
+            {
+                int index = line.IndexOf(SearchValue);
+
+                while (index != -1)
+                {
+                    occurences++;
+                    index = line.IndexOf(SearchValue, index + SearchValue.Length);
+                }
+            }
+
+            return occurences;
+        }
+
     }
 
     public class Program
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<Benchmark>();
+            BenchmarkRunner.Run<Benchmark>(new DebugInProcessConfig());
         }
     }
 }
