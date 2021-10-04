@@ -8,3 +8,5 @@ Particular attention should be paid to the time it takes to count the occurences
 Following that any choices you make around speed and performance should be noted and justified as to why it was done.
 
 There are a few files of different lengths to allow comparison for time and memory allocation
+
+Please fork this repo and host your solution in your own github
